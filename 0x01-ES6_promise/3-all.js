@@ -3,9 +3,8 @@ import { uploadPhoto, createUser } from './utils';
 function handleProfileSignup() {
   return Promise.all([uploadPhoto(), createUser()])
     .then((results) => {
-      const [photoResult, userResult] = results;
       console.log(
-        `${photoResult.body} ${userResult.firstName} ${userResult.lastName}`
+        `${results[0].body} ${results[1].firstName} ${results[1].lastName}`
       );
     })
     .catch(() => {
