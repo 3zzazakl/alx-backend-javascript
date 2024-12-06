@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { uploadPhoto, createUser } from './utils';
+import { uploadPhoto, createUser } from './utils'; // eslint-disable-line import/no-unresolved
 
 function handleProfileSignup() {
   return Promise.all([uploadPhoto(), createUser()])
