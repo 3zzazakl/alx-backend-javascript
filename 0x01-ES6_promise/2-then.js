@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 function handleResponseFromAPI(promise) {
   return promise
     .then(() => {

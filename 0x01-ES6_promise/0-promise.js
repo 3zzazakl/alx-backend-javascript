@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-// return a resolved promise
 function getResponseFromAPI() {
   return new Promise((resolve) => {
     resolve('Response from API');

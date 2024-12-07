@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success) {
