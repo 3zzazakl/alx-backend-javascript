@@ -1,8 +1,8 @@
-function singUpUser(firstName, lastName) {
+function signUpUser(firstName, lastName) {
   return Promise.resolve({
     firstName,
     lastName,
   });
 }
 
-export default singUpUser;
+export default signUpUser;
