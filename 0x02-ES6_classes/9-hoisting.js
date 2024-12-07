@@ -28,7 +28,7 @@ export class StudentALX {
   }
 
   get fullStudentDescription() {
-    return `${self._firstName} ${self._lastName} - ${self._alxClass.year} - ${self._alxClass.location}`;
+    return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
   }
 }
 const class2019 = new ALXClass(2019, 'San Francisco');
