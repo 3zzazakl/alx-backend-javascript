@@ -3,8 +3,10 @@ function updateStudentGradeByCity(students, city, newGrades) {
     .filter((student) => student.location === city)
     .map((student) => {
       const gradeObject = newGrades.find((grade) => grade.studentId === student.id);
-      student.grade = gradeObject ? gradeObject.grade : 'N/A';
-      return student;
+      return {
+        ...student,
+        grade: gradeObject ? gradeObject.grade : 'N/A',
+      };
     });
 }
 
