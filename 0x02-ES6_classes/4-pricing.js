@@ -1,25 +1,25 @@
-import currency from './3-currency';
+import Currency from './3-currency';
 
 class Pricing {
-  constructor(amount, currency) {
-    this._amount = amount;
-    this._currency = currency;
+  constructor(amount, currencyInstance) {
+    this.amount = amount;
+    this.currency = currencyInstance;
   }
 
   get amount() {
-    return this._amount;
+    return this.amount;
   }
 
   set amount(value) {
-    this._amount = value;
+    this.amount = value;
   }
 
   get currency() {
-    return this._currency;
+    return this.currency;
   }
 
   set currency(value) {
-    this._currency = value;
+    this.currency = value;
   }
 
   displayFullPrice() {
