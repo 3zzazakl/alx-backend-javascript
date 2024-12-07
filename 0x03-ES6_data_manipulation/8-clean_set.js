@@ -1,13 +1,12 @@
 function cleanSet(set, startString) {
-  if ([...set].some((value) => typeof value !== 'string')) {
+  if (startString === '' || startString === undefined || !(set instanceof Set) || typeof startString !== 'string') {
     return '';
   }
 
-  const result = [...set]
-    .filter((value) => typeof value === 'string' && value.startsWith(startString))
-    .map((value) => value.slice(startString.length))
-    .join('-');
-  return result;
+  const result = Array.from(set)
+    .filter((value) => (value !== undefined ? value.startsWith(startString) : ''))
+    .map((value) => (value !== undefined ? value.slice(startString.length) : ''));
+  return result.join('-');
 }
 
 export default cleanSet;
