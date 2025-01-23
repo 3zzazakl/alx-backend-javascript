@@ -27,6 +27,10 @@ export class StudentHolberton {
     return this._alxClass;
   }
 
+  get holbertonClass() {
+    return this._alxClass;
+  }
+
   get fullStudentDescription() {
     return `${this._firstName} ${this._lastName} - ${this._alxClass.year} - ${this._alxClass.location}`;
   }
