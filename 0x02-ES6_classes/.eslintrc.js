@@ -20,6 +20,7 @@ module.exports = {
     'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
     'no-underscore-dangle': 'off',
     'import/extensions': 'off',
+    'max-classes-per-file': 'off',
   },
   overrides: [
     {
