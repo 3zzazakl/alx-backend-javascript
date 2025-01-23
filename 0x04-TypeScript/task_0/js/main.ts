@@ -1,20 +1,20 @@
 interface Student {
-    firstname: string;
-    lastname: string;
+    firstName: string;
+    lastName: string;
     age: number;
     location: string;
 }
 
 const student1: Student = {
-    firstname: "John",
-    lastname: "Doe",
+    firstName: "John",
+    lastName: "Doe",
     age: 21,
     location: "New York"
 };
 
 const student2: Student = {
-    firstname: "Jane",
-    lastname: "Smith",
+    firstName: "Jane",
+    lastName: "Smith",
     age: 22,
     location: "California"
 };
@@ -40,7 +40,7 @@ function renderStudentTable(students: Student[]): void {
         const row = document.createElement("tr");
 
         const firstNameCell = document.createElement("td");
-        firstNameCell.textContent = student.firstname;
+        firstNameCell.textContent = student.firstName;
 
         const locationCell = document.createElement("td");
         locationCell.textContent = student.location;
