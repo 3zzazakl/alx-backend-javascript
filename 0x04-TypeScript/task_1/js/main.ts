@@ -28,6 +28,7 @@ const director1: Directors = {
     numberOfReports: 17,
 };
 
+// eslint-disable-next-line @typescript-eslint/class-name-casing
 interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
