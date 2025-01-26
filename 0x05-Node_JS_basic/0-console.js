@@ -1,5 +1,4 @@
 // executing js with node
-
 function displayMessage(message) {
     console.log(message);
 }
