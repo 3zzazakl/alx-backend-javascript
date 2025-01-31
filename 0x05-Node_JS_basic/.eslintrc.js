@@ -22,16 +22,11 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-console': 'off',
     'no-shadow': 'off',
-    'indent': ['error', 2],
-    'quotes': ['error', "single"],
-    'semi': ['error', "always"],
     'no-restricted-syntax': [
       'error',
       'LabeledStatement',
       'WithStatement',
     ],
-    // add explicit configuration for rules that are disabled in the base config
-    'jest/no-hooks': ['error', { allow: ['beforeEach', 'afterEach'] }],
   },
   overrides:[
     {
