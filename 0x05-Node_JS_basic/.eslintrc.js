@@ -30,6 +30,8 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    // add explicit configuration for rules that are disabled in the base config
+    'jest/no-hooks': ['error', { allow: ['beforeEach', 'afterEach'] }],
   },
   overrides:[
     {
