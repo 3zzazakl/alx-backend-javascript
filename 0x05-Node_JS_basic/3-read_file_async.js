@@ -20,7 +20,7 @@ async function countStudents(fileName) {
       console.log(
         `Number of students in ${key}: ${
           filedOfStudy[key].length
-        }. List: ${filedOfStudy[key].join(', ')}`
+        }. List: ${filedOfStudy[key].join(', ')}`,
       );
     });
   } catch (error) {
