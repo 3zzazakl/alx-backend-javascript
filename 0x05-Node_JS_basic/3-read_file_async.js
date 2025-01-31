@@ -6,8 +6,8 @@ async function countStudents(fileName) {
         const students = studentData
             .split('\n')
             .filter((student) => student.length > 0)
-                .map((student) => student.split(','));
-        
+            .map((student) => student.split(','));
+
         students.shift();
         console.log(`Number of students: ${students.length}`);
         const filedOfStudy = {};
