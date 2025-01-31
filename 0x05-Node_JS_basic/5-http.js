@@ -1,9 +1,9 @@
 const http = require('http');
 const fs = require('fs').promises;
 
-async function countStudents(fileName) {
+async function countStudents(path) {
   try {
-    const studentData = await fs.readFile(fileName, 'utf8');
+    const studentData = await fs.readFile(path, 'utf8');
     let res = '';
     const students = studentData
       .split('\n')
@@ -18,7 +18,8 @@ async function countStudents(fileName) {
       filedOfStudy[student[3]].push(student[0]);
     });
     Object.keys(filedOfStudy).forEach((key) => {
-      res += `\nNumber of students in ${key}: ${filedOfStudy[key].length
+      res += `\nNumber of students in ${key}: ${
+        filedOfStudy[key].length
       }. List: ${filedOfStudy[key].join(', ')}`;
     });
     return res;
@@ -27,7 +28,7 @@ async function countStudents(fileName) {
   }
 }
 
-const app = http.createServer((req, res) => {
+const app = http.createServer(async (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   const msg = 'This is the list of our students';
   switch (req.url) {
@@ -36,7 +37,8 @@ const app = http.createServer((req, res) => {
       break;
     case '/students':
       try {
-        res.end(`${msg}\n${countStudents('students.csv')}`);
+        res.end(`${msg}\n${await
+        countStudents(process.argv[2])}`);
       } catch (error) {
         res.statusCode = 404;
         res.end(`${msg}\n${error.message}`);
