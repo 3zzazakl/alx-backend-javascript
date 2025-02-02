@@ -1,0 +1,35 @@
+{
+  "name": "0x06-unittests_in_js",
+  "version": "1.0.0",
+  "description": "alx-backend-javascript1",
+  "main": "0-calcul.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint",
+    "check-lint": "lint [0-9]*.js",
+    "test": "npx mocha --require @babel/register --exit",
+    "dev": "nodemon --exec bbel-node --presets babel-preset-env ./server.js ./database.csv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3zzazakl/alx-backend-javascript/0x06-unittests_in_js"
+  },
+  "author": "AzzazAkl",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^0.0.0",
+    "chai": "^4.3.8",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^28.11.0",
+    "mocha": "^11.1.0",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.0",
+    "sinon": "^7.5.0"
+  },
+  "dependencies": {
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1"
+  }
+}
